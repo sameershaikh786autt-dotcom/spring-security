@@ -19,4 +19,9 @@ public class SecurityController {
         return "login"; // Thymeleaf template name
     }
 
+    @GetMapping("/admin")
+    public String admin() {
+        return "Hello admin";
+    }
+
 }
