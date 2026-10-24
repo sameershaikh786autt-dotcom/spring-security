@@ -30,6 +30,9 @@ public class AppConfig {
         // // Authorization rules
         http.authorizeHttpRequests
                 (auth -> auth
+                                .requestMatchers("/api/access").permitAll()
+//                                .requestMatchers("/api/login/**").hasAnyRole("USER", "ADMIN")
+//                                .requestMatchers("/api/admin/**").hasAnyRole("ADMIN")
 //                        .requestMatchers("/api/access/**", "/api/login/**").permitAll()
 //                        .requestMatchers("/api/admin/**").hasAnyRole("ADMIN")
                         .anyRequest().authenticated()
